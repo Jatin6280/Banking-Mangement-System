@@ -45,9 +45,7 @@
                 if(choice.equals("cba")){
                     System.out.println( "Balance"+selected.getBalance());
                 }
-                else {
-                    System.out.println("Invalid Choice");
-                }
+          
             }
         }
     }

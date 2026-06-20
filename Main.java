@@ -1,8 +1,22 @@
     package com.company;
     import  java.util.Scanner;
+    import java.sql.*;
+    // At top of Main.java
+
     public class Main {
         public static void main(String[] args)
-        {   Scanner sc = new Scanner(System.in);
+
+        {
+            // In your Main.java add this:
+
+                CustomerDAO customerDAO = new CustomerDAO();
+
+            Customer c = new Customer("C003", "Jatin", "jatin@gmail.com");
+
+            customerDAO.addCustomer(c);
+
+            System.out.println("Customer added successfully!");
+            Scanner sc = new Scanner(System.in);
             Customer cust = new Customer("jatin3445t","Jatin","hasijajatin@gmail.com");
 
             Account sa = new SavingsAccount("ACC001", 5000);
@@ -45,7 +59,7 @@
                 if(choice.equals("cba")){
                     System.out.println( "Balance"+selected.getBalance());
                 }
-          
+
             }
         }
     }
